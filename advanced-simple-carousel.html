@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Two stage carousel | Advanced CSS selectors</title>
+<style>
+    body {
+        background-color: #234;
+    }
+    .carousel{
+        width: 840px;
+        /* border: 5px solid green; */
+        margin-top: 50px;
+        margin-right: auto;
+        margin-left: auto;
+        overflow: hidden;
+        /* box-shadow: 0 0 10px 2px #111; */
+    }
+    .carousel .slide{
+        width: 1800px;
+        /* border: 3px solid red; */
+        transition: 1s;
+
+    }
+    .carousel .controls{
+        text-align: center;
+    }
+    .carousel .controls a img {
+        text-decoration: none;
+        padding: 10px;
+    }
+    .carousel .controls a img:hover {
+      border-radius: 100%;
+      background-color: rgb(8, 36, 121);
+      width: 55px;
+      height: 55px;
+    }
+    .carousel #left:target .slide {
+        transform: translateX(0px);
+
+    }
+     .carousel #right:target .slide {
+        transform: translateX(-840px);
+
+    }
+    
+</style>
+</head>
+<body>
+    <div class="carousel">
+        <div id="left">
+            <div id="right">
+                <div class="slide">
+                    <img src="https://i.picsum.photos/id/258/280/400.jpg?hmac=aPFYiOTlxRONuhdj-nQqmx3byDha6ggsfYMyzjpNCUc" alt="">
+                    <img src="https://i.picsum.photos/id/140/280/400.jpg?hmac=KPEf6fuW1Rk8qwzR7hU3VIYvoqGoSxwZBrYhmVri5uA" alt="">
+                    <img src="https://i.picsum.photos/id/1004/280/400.jpg?hmac=yE8BhRNynJGO4z07a4RwuRLn09Kn39F3S6N2tJ9DKLw" alt="">
+                    <img src="https://i.picsum.photos/id/141/280/400.jpg?hmac=8LJdjFxhIwfcPVcjiNlN79FyX580UyUljr9V9bcGBis" alt="">
+                    <img src="https://i.picsum.photos/id/1056/280/400.jpg?hmac=irxV4oMP2QQiFe-8LbbNcOB3T716Fv3fxHN0155mjl0" alt="">
+                    <img src="https://i.picsum.photos/id/175/280/400.jpg?hmac=36eky4_uMf3yVeujDtv6ybiWxmdikkQ6lhndz-u8aCE" alt="">
+                </div>
+            </div>
+        </div>
+
+        <div class="controls">
+            <a href="#left"><img src="https://icons.iconarchive.com/icons/hopstarter/button/48/Button-Previous-icon.png" alt=""></a>
+            <a href="#right"><img src="https://icons.iconarchive.com/icons/hopstarter/button/48/Button-Next-icon.png" alt=""></a>
+        </div>
+    </div>
+</body>
+</html>
